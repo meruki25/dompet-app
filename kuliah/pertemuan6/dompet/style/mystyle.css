@@ -1,12 +1,26 @@
+body{
+    background: url('../media/bg.jpg');
+    background-size: cover;
+    font-family: 'Comfortaa', sans-serif;
+}
+
 .box{
-    border: 1px #cccccc solid;
-    margin-top: 30px;
+    background-color: #FFF;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border-radius: 15px;
+    margin-top: 50px;
     padding: 20px 30px;
 }
 
 .box .box-head{
     background-color: #D9D9D9;
+    border-radius: 15px 15px 0px 0px;
     padding: 20px;
+}
+
+.box .box-head strong{
+    font-size: 22px;
+    font-weight: 900;
 }
 
 .btn-primary {

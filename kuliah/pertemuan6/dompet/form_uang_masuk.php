@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Form Uang Masuk</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;500;600&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="style/mystyle.css" media="screen"/>
 </head>
@@ -49,10 +52,10 @@
                             </div>
                             <div class="pt-3 row">
                                 <div class="col">
-                                    <button type="submit" class="btn btn-primary col-12">Simpan</button>
+                                    <button type="submit" class="btn btn-primary w-100">Simpan</button>
                                 </div>
                                 <div class="col">
-                                    <a href="#" class="btn col-12">Batal</button>
+                                    <a href="#" class="btn w-100">Batal</a>
                                 </div>
                             </div>
                         </div>

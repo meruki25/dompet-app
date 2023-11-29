@@ -1,3 +1,20 @@
+<?php
+include "koneksi.php";
+
+$tanggal = $_POST['tanggal'];
+$kategori = $_POST['kategori'];
+$nominal = $_POST['nominal'];
+$keterangan = $_POST['keterangan'];
+$lampiran = $_POST['lampiran'];
+
+$sql = "INSERT INTO transaksi (tanggal, kategori, nominal, keterangan, lampiran, tanggal_input) VALUES ('$tanggal', '$kategori', '$nominal', '$keterangan', '', '".date('Y-m-d H:i:s')."')";
+if (mysqli_query($conn, $sql)) {
+    echo "New record created successfully";
+} else {
+    echo "Error: " .mysqli_error($conn);
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>

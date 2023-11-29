@@ -21,12 +21,12 @@
                         </div>
                         <div class="p-4">
                             <div class="mb-3">
-                                <label for="tanggal" class="form-label">Tanggal</label>
-                                <input type="date" class="form-control" id="tanggal" name="tanggal">
+                                <label for="tanggal" class="form-label">Tanggal <span class="text-danger">*</span></label>
+                                <input type="date" class="form-control" id="tanggal" name="tanggal" required />
                             </div>
                             <div class="mb-3">
-                                <label for="kategori" class="form-label">Kategori</label>
-                                <select class="form-control" name="kategori">
+                                <label for="kategori" class="form-label">Kategori <span class="text-danger">*</span></label>
+                                <select class="form-control" name="kategori" required>
                                     <option value="">Pilih</option>
                                     <option value="Gaji Rutin">Gaji Rutin</option>
                                     <option value="Bonus">Bonus</option>
@@ -36,10 +36,10 @@
                                 </select>
                             </div>
                             <div class="mb-3">
-                                <label for="nominal" class="form-label">Nominal</label>
+                                <label for="nominal" class="form-label">Nominal <span class="text-danger">*</span></label>
                                 <div class="input-group mb-3">
                                     <span class="input-group-text" id="basic-addon1">Rp.</span>
-                                    <input type="text" class="form-control" aria-describedby="basic-addon1" name="nominal">
+                                    <input type="text" class="form-control" aria-describedby="basic-addon1" name="nominal" required />
                                 </div>
                             </div>
                             <div class="mb-3">
@@ -48,7 +48,7 @@
                             </div>
                             <div class="mb-3">
                                 <label for="lampiran" class="form-label">Lampiran</label>
-                                <input type="file" class="form-control" id="lampiran" name="lampiran">
+                                <input type="file" class="form-control" id="lampiran" name="lampiran" />
                             </div>
                             <div class="pt-3 row">
                                 <div class="col">

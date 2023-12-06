@@ -23,6 +23,7 @@
                                     <th>Kategori</th>
                                     <th>Nominal</th>
                                     <th>Ket.</th>
+                                    <th>Aksi</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -41,6 +42,10 @@
                                     <td><?php echo $row['kategori']?></td>
                                     <td><?php echo $row['nominal']?></td>
                                     <td><?php echo $row['keterangan']?></td>
+                                    <td>
+                                        <a href="edit_transaksi.php?id=<?php echo $row['id']?>" class="btn btn-sm btn-warning">Edit</a>
+                                        <a href="hapus_transaksi.php?id=<?php echo $row['id']?>" class="btn btn-sm btn-danger">Hapus</a>
+                                    </td>
                                 </tr>
                                 <?php
                                         }

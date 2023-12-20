@@ -4,7 +4,6 @@ include('koneksi.php');
 $sql = "SELECT * FROM transaksi WHERE id = '$id'";
 $result = mysqli_query($conn, $sql);
 $row = mysqli_fetch_assoc($result);
-// var_dump($row);
 ?>
 
 <!DOCTYPE html>
@@ -20,10 +19,12 @@ $row = mysqli_fetch_assoc($result);
         <div class="row justify-content-md-center">
             <div class="col col-lg-7">
                 <div class="box">
-                    <form action="aksi_form_uang_masuk.php" method="POST">
-                        <div class="box-head">
-                            <strong>FORM EDIT UANG MASUK</strong>
-                        </div>
+                    <div class="box-head">
+                        <strong>FORM EDIT UANG MASUK</strong>
+                    </div>
+                    <?php if($row != null){ ?>
+                    <form action="aksi_edit_transaksi.php" method="POST">
+                        <input type="hidden" name="id" value="<?php echo $id;?>" />
                         <div class="p-4">
                             <div class="mb-3">
                                 <label for="tanggal" class="form-label">Tanggal <span class="text-danger">*</span></label>
@@ -65,6 +66,19 @@ $row = mysqli_fetch_assoc($result);
                             </div>
                         </div>
                     </form>
+                    <?php } else { ?>
+                    <div class="p-4">
+                        <div class="mb-3">
+                            <div class="alert alert-danger" role="alert">
+                                Data tidak ditemukan
+                            </div>
+                        </div>
+                        <div class="pt-3 row">
+                            <div class="col">
+                                <a href="tabel_transaksi.php" class="btn btn-secondary w-100">Kembali</a>
+                            </div>
+                        </div>
+                    <?php } ?>
                 </div>
             </div>
         </div>

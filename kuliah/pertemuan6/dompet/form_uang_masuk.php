@@ -1,3 +1,8 @@
+<?php
+include('koneksi.php');
+$sql = "SELECT * FROM kategori";
+$result = mysqli_query($conn, $sql);
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,7 +16,7 @@
         <div class="row justify-content-md-center">
             <div class="col col-lg-7">
                 <div class="box">
-                    <form action="aksi_form_uang_masuk.php" method="POST">
+                    <form action="aksi_form_uang_masuk.php" method="POST" enctype="multipart/form-data">
                         <div class="box-head">
                             <strong>FORM UANG MASUK</strong>
                         </div>
@@ -24,11 +29,9 @@
                                 <label for="kategori" class="form-label">Kategori <span class="text-danger">*</span></label>
                                 <select class="form-control" name="kategori" required>
                                     <option value="">Pilih</option>
-                                    <option value="Gaji Rutin">Gaji Rutin</option>
-                                    <option value="Bonus">Bonus</option>
-                                    <option value="Usaha Sampingan">Usaha Sampingan</option>
-                                    <option value="Warisan">Warisan</option>
-                                    <option value="Uang Kaget">Uang Kaget</option>
+                                    <?php while($row = mysqli_fetch_assoc($result)) { ?>
+                                    <option value="<?php echo $row['nama']; ?>"><?php echo $row['nama']; ?></option>
+                                    <?php } ?>
                                 </select>
                             </div>
                             <div class="mb-3">
@@ -51,7 +54,7 @@
                                     <button type="submit" class="btn btn-primary w-100">Simpan</button>
                                 </div>
                                 <div class="col">
-                                    <a href="#" class="btn w-100">Batal</a>
+                                    <a href="tabel_transaksi.php" class="btn w-100">Batal</a>
                                 </div>
                             </div>
                         </div>

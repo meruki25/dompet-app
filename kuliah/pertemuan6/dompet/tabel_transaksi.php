@@ -14,6 +14,9 @@
                     <div class="box-head">
                         <strong>TABEL TRANSAKSI</strong>
                     </div>
+                    <div class="pt-2">
+                        <a href="form_uang_masuk.php" class="btn btn-primary">Tambah Uang Masuk</a>
+                    </div>
                     <div class="p-4">
                         <table class="table table-striped">
                             <thead>
@@ -44,7 +47,7 @@
                                     <td><?php echo $row['keterangan']?></td>
                                     <td>
                                         <a href="edit_transaksi.php?id=<?php echo $row['id']?>" class="btn btn-sm btn-warning">Edit</a>
-                                        <a href="hapus_transaksi.php?id=<?php echo $row['id']?>" class="btn btn-sm btn-danger">Hapus</a>
+                                        <a href="hapus_transaksi.php?id=<?php echo $row['id']?>" class="btn btn-sm btn-danger" onclick="return confirm('Are you sure you want to delete this item?');">Hapus</a>
                                     </td>
                                 </tr>
                                 <?php
